@@ -775,35 +775,73 @@ def setup(app):
         return conf_content
 
     def _generate_index_rst(self):
-        """Generate index.rst file with configurable TOC sections."""
-        # Build TOC entries based on configuration options
-        toc_entries = []
+        """Generate index.rst file with enhanced TOC structure."""
+        from .template_styles import get_template_style
 
-        # Always include autoapi if it will be generated
-        toc_entries.append("autoapi/index")
+        # Get template style to check if we should use enhanced index
+        style_name = self.doc_config.get("template_style", "minimal")
+        style = get_template_style(style_name)
 
-        # Add optional sections based on configuration (defaulting to false)
-        if self.doc_config.get("with_guides", False):
-            toc_entries.append("guides/index")
+        # Try to use enhanced template if available
+        template_path = self.template_path / "doc_templates" / "enhanced_index.rst.j2"
+        if template_path.exists() and style_name != "default":
+            # Use Jinja2 template for enhanced index
+            from jinja2 import Environment, FileSystemLoader
 
-        if self.doc_config.get("with_examples", False):
-            toc_entries.append("examples/index")
+            env = Environment(
+                loader=FileSystemLoader(self.template_path / "doc_templates")
+            )
+            template = env.get_template("enhanced_index.rst.j2")
 
-        if self.doc_config.get("with_cli", False):
-            toc_entries.append("cli/index")
+            # Prepare context
+            context = {
+                "project_name": self.project_info["name"],
+                "project_description": self.project_info.get("description", ""),
+                "is_monorepo": self.project_info["type"] == "monorepo",
+                "is_single_package": self.project_info["type"] == "single",
+                "packages": self.project_info.get("packages", []),
+                "package_name": self.project_info.get(
+                    "package_name", self.project_info["name"]
+                ),
+                "package_descriptions": {},  # TODO: Extract from pyproject.toml
+                "has_autoapi": True,
+                "with_guides": self.doc_config.get("with_guides", False),
+                "with_examples": self.doc_config.get("with_examples", False),
+                "with_cli": self.doc_config.get("with_cli", False),
+                "with_tutorials": self.doc_config.get("with_tutorials", False),
+            }
 
-        if self.doc_config.get("with_tutorials", False):
-            toc_entries.append("tutorials/index")
+            index_content = template.render(**context)
+        else:
+            # Fallback to simple index.rst
+            # Build TOC entries based on configuration options
+            toc_entries = []
 
-        # Always include changelog if it exists (this is typically generated)
-        docs_source = self.project_path / "docs" / "source"
-        if (docs_source / "changelog.rst").exists():
-            toc_entries.append("changelog")
+            # Always include autoapi if it will be generated
+            toc_entries.append("autoapi/index")
 
-        # Generate TOC content
-        toc_content = "\n   ".join(toc_entries)
+            # Add optional sections based on configuration (defaulting to false)
+            if self.doc_config.get("with_guides", False):
+                toc_entries.append("guides/index")
 
-        index_content = f"""
+            if self.doc_config.get("with_examples", False):
+                toc_entries.append("examples/index")
+
+            if self.doc_config.get("with_cli", False):
+                toc_entries.append("cli/index")
+
+            if self.doc_config.get("with_tutorials", False):
+                toc_entries.append("tutorials/index")
+
+            # Always include changelog if it exists (this is typically generated)
+            docs_source = self.project_path / "docs" / "source"
+            if (docs_source / "changelog.rst").exists():
+                toc_entries.append("changelog")
+
+            # Generate TOC content
+            toc_content = "\n   ".join(toc_entries)
+
+            index_content = f"""
 Welcome to {self.project_info["name"]} Documentation
 {"=" * (len(self.project_info["name"]) + 25)}
 

@@ -1,0 +1,130 @@
+{# Enhanced index.rst template with expanded TOC tree #}
+{{ project_name }} Documentation
+{{ "=" * (project_name|length + 14) }}
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   :hidden:
+
+   self
+
+{% if has_autoapi %}
+.. toctree::
+   :maxdepth: 3
+   :caption: API Reference:
+   :hidden:
+
+   autoapi/index
+{% endif %}
+
+{% if with_guides %}
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guides:
+   :hidden:
+
+   guides/index
+{% endif %}
+
+{% if with_examples %}
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples:
+   :hidden:
+
+   examples/index
+{% endif %}
+
+{% if with_cli %}
+.. toctree::
+   :maxdepth: 2
+   :caption: CLI Reference:
+   :hidden:
+
+   cli/index
+{% endif %}
+
+{% if with_tutorials %}
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials:
+   :hidden:
+
+   tutorials/index
+{% endif %}
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Project Info:
+   :hidden:
+
+   changelog
+   genindex
+   modindex
+
+Overview
+--------
+
+{{ project_description | default("Welcome to " + project_name + " documentation.") }}
+
+{% if is_monorepo %}
+Package Structure
+-----------------
+
+This is a monorepo containing the following packages:
+
+{% for package in packages %}
+* **{{ package }}** - {{ package_descriptions.get(package, "Package description") }}
+{% endfor %}
+{% endif %}
+
+Quick Links
+-----------
+
+* :ref:`genindex` - Complete index of all documented items
+* :ref:`modindex` - Quick access to all modules
+* :ref:`search` - Search the documentation
+
+{% if has_autoapi %}
+API Documentation
+-----------------
+
+The complete API reference is available at :doc:`autoapi/index`.
+
+{% if is_single_package %}
+Key modules:
+
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
+
+   {{ package_name }}
+{% endif %}
+{% endif %}
+
+Getting Started
+---------------
+
+{% if with_guides %}
+Check out our :doc:`guides/quickstart` to get started quickly.
+{% else %}
+.. code-block:: bash
+
+   # Install the package
+   pip install {{ project_name }}
+
+   # Import and use
+   >>> import {{ package_name | default(project_name) }}
+   >>> {{ package_name | default(project_name) }}.__version__
+{% endif %}
+
+Contributing
+------------
+
+We welcome contributions! Please see our `GitHub repository <https://github.com/yourusername/{{ project_name }}>`_ for more information.
+
+License
+-------
+
+This project is licensed under the MIT License.

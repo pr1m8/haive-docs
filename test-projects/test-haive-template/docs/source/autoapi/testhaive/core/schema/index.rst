@@ -6,9 +6,6 @@ testhaive.core.schema
 Schema module for testhaive.core data structures and state management.
 
 
-.. autolink-examples:: testhaive.core.schema
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Schema module for testhaive.core data structures and state management.
 
    Schema module for testhaive.core data structures and state management.
 
-
-   .. autolink-examples:: testhaive.core.schema
-      :collapse:
 
 
 
@@ -149,13 +143,6 @@ Schema module for testhaive.core data structures and state management.
             Initialize agent state with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: AgentState
-               :collapse:
-
             .. py:method:: add_conversation_message(role: str, content: str, metadata: Optional[Dict[str, Any]] = None) -> None
 
                Add a message to the conversation history.
@@ -165,9 +152,6 @@ Schema module for testhaive.core data structures and state management.
                :param metadata: Optional metadata for the message
 
 
-               .. autolink-examples:: add_conversation_message
-                  :collapse:
-
 
             .. py:method:: add_error(error_message: str) -> None
 
@@ -175,9 +159,6 @@ Schema module for testhaive.core data structures and state management.
 
                :param error_message: Error message to record
 
-
-               .. autolink-examples:: add_error
-                  :collapse:
 
 
             .. py:method:: add_task_to_queue(task_description: str) -> None
@@ -187,9 +168,6 @@ Schema module for testhaive.core data structures and state management.
                :param task_description: Description of the task to add
 
 
-               .. autolink-examples:: add_task_to_queue
-                  :collapse:
-
 
             .. py:method:: complete_current_task() -> Optional[str]
 
@@ -197,9 +175,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Next task from queue if available, None otherwise
 
-
-               .. autolink-examples:: complete_current_task
-                  :collapse:
 
 
             .. py:method:: get_conversation_summary() -> Dict[str, Any]
@@ -209,9 +184,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: Dictionary with conversation statistics
 
 
-               .. autolink-examples:: get_conversation_summary
-                  :collapse:
-
 
             .. py:method:: get_tool_usage_summary() -> Dict[str, Any]
 
@@ -219,9 +191,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Dictionary with tool usage statistics
 
-
-               .. autolink-examples:: get_tool_usage_summary
-                  :collapse:
 
 
             .. py:method:: record_tool_call(tool_name: str, parameters: Dict[str, Any], result: Optional[Any] = None) -> None
@@ -233,9 +202,6 @@ Schema module for testhaive.core data structures and state management.
                :param result: Result returned by the tool (if available)
 
 
-               .. autolink-examples:: record_tool_call
-                  :collapse:
-
 
             .. py:method:: set_current_task(task_description: str) -> None
 
@@ -243,9 +209,6 @@ Schema module for testhaive.core data structures and state management.
 
                :param task_description: Description of the task
 
-
-               .. autolink-examples:: set_current_task
-                  :collapse:
 
 
             .. py:method:: update_performance_metric(metric_name: str, value: float) -> None
@@ -256,9 +219,6 @@ Schema module for testhaive.core data structures and state management.
                :param value: New value for the metric
 
 
-               .. autolink-examples:: update_performance_metric
-                  :collapse:
-
 
             .. py:method:: update_resource_usage(resource_type: ResourceType, usage: float) -> None
 
@@ -267,9 +227,6 @@ Schema module for testhaive.core data structures and state management.
                :param resource_type: Type of resource being tracked
                :param usage: Current usage amount
 
-
-               .. autolink-examples:: update_resource_usage
-                  :collapse:
 
 
             .. py:attribute:: agent_name
@@ -404,20 +361,10 @@ Schema module for testhaive.core data structures and state management.
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseSchema
-               :collapse:
-
             .. py:class:: Config
 
                Pydantic configuration for BaseSchema.
 
-
-               .. autolink-examples:: Config
-                  :collapse:
 
                .. py:attribute:: extra
                   :value: 'forbid'
@@ -443,26 +390,17 @@ Schema module for testhaive.core data structures and state management.
                Validate business logic rules.
 
 
-               .. autolink-examples:: _validate_business_rules
-                  :collapse:
-
 
             .. py:method:: _validate_fields() -> None
 
                Validate individual field constraints.
 
 
-               .. autolink-examples:: _validate_fields
-                  :collapse:
-
 
             .. py:method:: _validate_relationships() -> None
 
                Validate relationships between fields.
 
-
-               .. autolink-examples:: _validate_relationships
-                  :collapse:
 
 
             .. py:method:: deserialize(data: Union[str, Dict[str, Any], bytes], format: SerializationFormat = SerializationFormat.JSON) -> T
@@ -489,9 +427,6 @@ Schema module for testhaive.core data structures and state management.
                    schema = MySchema.deserialize(data_dict, SerializationFormat.DICT)
 
 
-               .. autolink-examples:: deserialize
-                  :collapse:
-
 
             .. py:method:: get_metadata(key: str, default: Any = None) -> Any
 
@@ -503,9 +438,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: Metadata value or default
 
 
-               .. autolink-examples:: get_metadata
-                  :collapse:
-
 
             .. py:method:: get_schema_info() -> Dict[str, Any]
 
@@ -513,9 +445,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Dictionary containing schema metadata and status
 
-
-               .. autolink-examples:: get_schema_info
-                  :collapse:
 
 
             .. py:method:: serialize(format: SerializationFormat = SerializationFormat.JSON) -> Union[str, Dict[str, Any], bytes]
@@ -539,9 +468,6 @@ Schema module for testhaive.core data structures and state management.
                    data_dict = schema.serialize(SerializationFormat.DICT)
 
 
-               .. autolink-examples:: serialize
-                  :collapse:
-
 
             .. py:method:: set_metadata(key: str, value: Any) -> None
 
@@ -551,17 +477,11 @@ Schema module for testhaive.core data structures and state management.
                :param value: Metadata value
 
 
-               .. autolink-examples:: set_metadata
-                  :collapse:
-
 
             .. py:method:: update_timestamp() -> None
 
                Update the updated_at timestamp to current time.
 
-
-               .. autolink-examples:: update_timestamp
-                  :collapse:
 
 
             .. py:method:: validate_all() -> bool
@@ -589,9 +509,6 @@ Schema module for testhaive.core data structures and state management.
                    schema.set_validation_level(ValidationLevel.STRICT)
                    is_valid = schema.validate_all()
 
-
-               .. autolink-examples:: validate_all
-                  :collapse:
 
 
             .. py:attribute:: created_at
@@ -690,22 +607,12 @@ Schema module for testhaive.core data structures and state management.
             Initialize execution context with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ExecutionContext
-               :collapse:
-
             .. py:method:: check_resource_limits() -> Dict[str, bool]
 
                Check if current resource usage is within limits.
 
                :returns: Dictionary showing which limits are exceeded
 
-
-               .. autolink-examples:: check_resource_limits
-                  :collapse:
 
 
             .. py:method:: end_execution_session(session_id: str, outputs: Optional[Dict[str, Any]] = None) -> None
@@ -716,9 +623,6 @@ Schema module for testhaive.core data structures and state management.
                :param outputs: Optional session outputs
 
 
-               .. autolink-examples:: end_execution_session
-                  :collapse:
-
 
             .. py:method:: get_session_summary() -> Dict[str, Any]
 
@@ -726,9 +630,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Dictionary with session statistics
 
-
-               .. autolink-examples:: get_session_summary
-                  :collapse:
 
 
             .. py:method:: start_execution_session(session_name: str, parameters: Optional[Dict[str, Any]] = None) -> str
@@ -741,9 +642,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: Unique session ID
 
 
-               .. autolink-examples:: start_execution_session
-                  :collapse:
-
 
             .. py:method:: update_monitoring_data(metric_name: str, value: float) -> None
 
@@ -753,9 +651,6 @@ Schema module for testhaive.core data structures and state management.
                :param value: New metric value
 
 
-               .. autolink-examples:: update_monitoring_data
-                  :collapse:
-
 
             .. py:method:: update_session_status(session_id: str, status: ExecutionStatus) -> None
 
@@ -764,9 +659,6 @@ Schema module for testhaive.core data structures and state management.
                :param session_id: ID of the session to update
                :param status: New status for the session
 
-
-               .. autolink-examples:: update_session_status
-                  :collapse:
 
 
             .. py:attribute:: active_sessions
@@ -834,13 +726,6 @@ Schema module for testhaive.core data structures and state management.
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: MetaStateSchema
-               :collapse:
-
             .. py:attribute:: agent_states
                :type:  Dict[str, Dict[str, Any]]
                :value: None
@@ -863,13 +748,6 @@ Schema module for testhaive.core data structures and state management.
 
             :param \*\*kwargs: Keyword arguments for schema fields
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateProjection
-               :collapse:
 
             .. py:attribute:: projection_fields
                :type:  List[str]
@@ -963,22 +841,12 @@ Schema module for testhaive.core data structures and state management.
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateSchema
-               :collapse:
-
             .. py:method:: can_rollback() -> bool
 
                Check if this state can be rolled back to its previous state.
 
                :returns: True if rollback is possible, False otherwise
 
-
-               .. autolink-examples:: can_rollback
-                  :collapse:
 
 
             .. py:method:: create_transition(**changes) -> T
@@ -1008,9 +876,6 @@ Schema module for testhaive.core data structures and state management.
                    )
 
 
-               .. autolink-examples:: create_transition
-                  :collapse:
-
 
             .. py:method:: get_state_summary() -> Dict[str, Any]
 
@@ -1018,9 +883,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Dictionary containing state summary information
 
-
-               .. autolink-examples:: get_state_summary
-                  :collapse:
 
 
             .. py:method:: get_transition_history() -> List[str]
@@ -1035,9 +897,6 @@ Schema module for testhaive.core data structures and state management.
                   this would traverse the state chain to build the complete history.
 
 
-               .. autolink-examples:: get_transition_history
-                  :collapse:
-
 
             .. py:method:: has_changed_since(state_id: str) -> bool
 
@@ -1048,9 +907,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: True if state has changed, False otherwise
 
 
-               .. autolink-examples:: has_changed_since
-                  :collapse:
-
 
             .. py:method:: mark_final() -> None
 
@@ -1058,9 +914,6 @@ Schema module for testhaive.core data structures and state management.
 
                Final states cannot be transitioned from or rolled back.
 
-
-               .. autolink-examples:: mark_final
-                  :collapse:
 
 
             .. py:method:: rollback() -> Optional[StateSchema]
@@ -1077,9 +930,6 @@ Schema module for testhaive.core data structures and state management.
 
                :raises ValueError: If rollback is not possible
 
-
-               .. autolink-examples:: rollback
-                  :collapse:
 
 
             .. py:attribute:: is_final
@@ -1128,13 +978,6 @@ Schema module for testhaive.core data structures and state management.
 
             :param \*\*kwargs: Keyword arguments for schema fields
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateTransfer
-               :collapse:
 
             .. py:attribute:: source_agent
                :type:  str
@@ -1191,22 +1034,12 @@ Schema module for testhaive.core data structures and state management.
             Initialize validation mixin with default settings.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ValidationMixin
-               :collapse:
-
             .. py:method:: add_validation_error(message: str) -> None
 
                Add a validation error message.
 
                :param message: Error message to add
 
-
-               .. autolink-examples:: add_validation_error
-                  :collapse:
 
 
             .. py:method:: add_validation_warning(message: str) -> None
@@ -1216,17 +1049,11 @@ Schema module for testhaive.core data structures and state management.
                :param message: Warning message to add
 
 
-               .. autolink-examples:: add_validation_warning
-                  :collapse:
-
 
             .. py:method:: clear_validation_messages() -> None
 
                Clear all validation errors and warnings.
 
-
-               .. autolink-examples:: clear_validation_messages
-                  :collapse:
 
 
             .. py:method:: get_validation_errors() -> List[str]
@@ -1236,9 +1063,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: List of validation error messages
 
 
-               .. autolink-examples:: get_validation_errors
-                  :collapse:
-
 
             .. py:method:: get_validation_warnings() -> List[str]
 
@@ -1246,9 +1070,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: List of validation warning messages
 
-
-               .. autolink-examples:: get_validation_warnings
-                  :collapse:
 
 
             .. py:method:: set_validation_level(level: ValidationLevel) -> None
@@ -1268,9 +1089,6 @@ Schema module for testhaive.core data structures and state management.
                    schema.set_validation_level(ValidationLevel.DISABLED)
 
 
-               .. autolink-examples:: set_validation_level
-                  :collapse:
-
 
             .. py:method:: validate_all() -> bool
                :abstractmethod:
@@ -1282,9 +1100,6 @@ Schema module for testhaive.core data structures and state management.
 
                .. note:: Subclasses must implement this method to define their validation logic.
 
-
-               .. autolink-examples:: validate_all
-                  :collapse:
 
 
             .. py:attribute:: _validation_errors
@@ -1387,13 +1202,6 @@ Schema module for testhaive.core data structures and state management.
             Initialize workflow state with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: WorkflowState
-               :collapse:
-
             .. py:method:: add_step(step_id: str, step_config: Dict[str, Any]) -> None
 
                Add a step to the workflow.
@@ -1401,9 +1209,6 @@ Schema module for testhaive.core data structures and state management.
                :param step_id: Unique identifier for the step
                :param step_config: Configuration for the step
 
-
-               .. autolink-examples:: add_step
-                  :collapse:
 
 
             .. py:method:: add_step_dependency(step_id: str, depends_on: str) -> None
@@ -1413,9 +1218,6 @@ Schema module for testhaive.core data structures and state management.
                :param step_id: ID of the step that has a dependency
                :param depends_on: ID of the step that must complete first
 
-
-               .. autolink-examples:: add_step_dependency
-                  :collapse:
 
 
             .. py:method:: can_execute_step(step_id: str) -> bool
@@ -1427,9 +1229,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: True if step can be executed, False otherwise
 
 
-               .. autolink-examples:: can_execute_step
-                  :collapse:
-
 
             .. py:method:: complete_step(step_id: str, outputs: Dict[str, Any]) -> None
 
@@ -1438,9 +1237,6 @@ Schema module for testhaive.core data structures and state management.
                :param step_id: ID of the completed step
                :param outputs: Outputs produced by the step
 
-
-               .. autolink-examples:: complete_step
-                  :collapse:
 
 
             .. py:method:: fail_step(step_id: str, error_message: str) -> None
@@ -1451,9 +1247,6 @@ Schema module for testhaive.core data structures and state management.
                :param error_message: Error message describing the failure
 
 
-               .. autolink-examples:: fail_step
-                  :collapse:
-
 
             .. py:method:: get_executable_steps() -> List[str]
 
@@ -1462,9 +1255,6 @@ Schema module for testhaive.core data structures and state management.
                :returns: List of step IDs that can be executed
 
 
-               .. autolink-examples:: get_executable_steps
-                  :collapse:
-
 
             .. py:method:: get_workflow_progress() -> Dict[str, Any]
 
@@ -1472,9 +1262,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: Dictionary with progress statistics
 
-
-               .. autolink-examples:: get_workflow_progress
-                  :collapse:
 
 
             .. py:method:: start_step(step_id: str) -> bool
@@ -1485,9 +1272,6 @@ Schema module for testhaive.core data structures and state management.
 
                :returns: True if step was started, False if dependencies not met
 
-
-               .. autolink-examples:: start_step
-                  :collapse:
 
 
             .. py:attribute:: completed_steps

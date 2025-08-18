@@ -314,34 +314,44 @@ class DocsInitializer:
         template_manager.create_all_sections(self.doc_config)
 
     def _copy_static_files(self):
-        """Copy static assets from templates."""
-        static_files = [
-            # CSS files - Modern 4-file system (matches template)
-            ("static/enhanced-design.css", "docs/source/_static/enhanced-design.css"),
-            (
-                "static/breadcrumb-navigation.css",
-                "docs/source/_static/breadcrumb-navigation.css",
-            ),
-            ("static/mermaid-custom.css", "docs/source/_static/mermaid-custom.css"),
-            (
-                "static/tippy-enhancements.css",
-                "docs/source/_static/tippy-enhancements.css",
-            ),
-            # Legacy CSS (keep for backward compatibility)
-            ("static/css/custom.css", "docs/source/_static/css/custom.css"),
-            # JS files
-            (
-                "static/js/api-enhancements.js",
-                "docs/source/_static/js/api-enhancements.js",
-            ),
-            (
-                "static/js/furo-enhancements.js",
-                "docs/source/_static/furo-enhancements.js",
-            ),
-            ("static/js/mermaid-config.js", "docs/source/_static/mermaid-config.js"),
-            # Templates
-            ("_templates/layout.html", "docs/source/_templates/layout.html"),
-        ]
+        """Copy static assets from templates based on template style."""
+        from .template_styles import get_template_style
+
+        # Get the template style configuration
+        style_name = self.doc_config.get("template_style", "minimal")
+        style = get_template_style(style_name)
+
+        # Build list of files to copy based on style
+        static_files = []
+
+        # Add CSS files from style
+        for css_file in style.css_files:
+            static_files.append(
+                (f"static/{css_file}", f"docs/source/_static/{css_file}")
+            )
+
+        # Add JS files from style
+        for js_file in style.js_files:
+            static_files.append((f"static/{js_file}", f"docs/source/_static/{js_file}"))
+
+        # Always include these core files
+        static_files.extend(
+            [
+                # Legacy CSS (keep for backward compatibility)
+                ("static/css/custom.css", "docs/source/_static/css/custom.css"),
+                # Additional JS files not in style config
+                (
+                    "static/js/furo-enhancements.js",
+                    "docs/source/_static/furo-enhancements.js",
+                ),
+                (
+                    "static/js/mermaid-config.js",
+                    "docs/source/_static/mermaid-config.js",
+                ),
+                # Templates
+                ("_templates/layout.html", "docs/source/_templates/layout.html"),
+            ]
+        )
 
         for src, dest in static_files:
             src_path = self.template_path / src
@@ -352,6 +362,18 @@ class DocsInitializer:
 
     def _copy_autoapi_templates(self):
         """Copy AutoAPI templates to the project documentation directory."""
+        from .template_styles import get_template_style
+
+        # Get the template style configuration
+        style_name = self.doc_config.get("template_style", "minimal")
+        style = get_template_style(style_name)
+
+        # Only copy custom templates if the style uses them
+        if not style.use_custom_templates:
+            if not self.quiet:
+                click.echo(f"ℹ️  Using default AutoAPI templates for {style_name} style")
+            return
+
         src_template_dir = self.template_path / "_autoapi_templates"
         dest_template_dir = self.project_path / "docs" / "source" / "_autoapi_templates"
 
@@ -375,6 +397,7 @@ class DocsInitializer:
         to ensure consistency and prevent duplication.
         """
         from .config import get_haive_config
+        from .template_styles import get_template_style
 
         # Determine Python path based on project structure
         if self.project_info["structure"] == "src":
@@ -400,12 +423,28 @@ class DocsInitializer:
             package_name=self.project_info["name"], package_path=str(self.project_path)
         )
 
+        # Get template style
+        style_name = self.doc_config.get("template_style", "minimal")
+        style = get_template_style(style_name)
+
+        # Generate CSS files list based on style
+        css_files_list = ", ".join([f'"{css}"' for css in style.css_files])
+
+        # Generate theme options based on style
+        theme_options_str = ""
+        if style.theme_options:
+            theme_options_str = "\n# Template style theme options\n"
+            theme_options_str += "html_theme_options.update({\n"
+            for key, value in style.theme_options.items():
+                theme_options_str += f'    "{key}": {repr(value)},\n'
+            theme_options_str += "})\n"
+
         # Build the conf.py content
         conf_content = f'''"""
 Sphinx configuration for {self.project_info["name"]}.
 
 This configuration uses PyDevelop-Docs shared configuration.
-Generated by pydevelop-docs init.
+Generated by pydevelop-docs init with template style: {style_name}
 """
 
 import os
@@ -436,17 +475,17 @@ for key, value in _config.items():
 # Override autoapi_dirs for this specific project structure
 autoapi_dirs = {autoapi_dirs}
 
+# Template style: {style_name}
+# Override CSS files based on template style
+html_css_files = [{css_files_list}]
+
+{theme_options_str}
 # -- Additional setup --------------------------------------------------------
 
 def setup(app):
     """Sphinx setup hook."""
-    # Modern CSS files (matches html_css_files)
-    css_files = [
-        "enhanced-design.css",
-        "breadcrumb-navigation.css", 
-        "mermaid-custom.css",
-        "tippy-enhancements.css"
-    ]
+    # CSS files based on template style ({style_name})
+    css_files = [{css_files_list}]
     for css_file in css_files:
         if os.path.exists("_static/" + css_file):
             app.add_css_file(css_file)
@@ -463,6 +502,12 @@ def setup(app):
 
     def _generate_conf_py(self):
         """Generate Sphinx configuration with full PyAutoDoc setup."""
+        from .template_styles import get_template_style
+
+        # Get template style
+        style_name = self.doc_config.get("template_style", "minimal")
+        style = get_template_style(style_name)
+
         # Determine Python path based on project structure
         if self.project_info["structure"] == "src":
             sys_path = 'sys.path.insert(0, os.path.abspath("../../src"))'
@@ -651,23 +696,10 @@ intersphinx_mapping = {{
 
 html_theme = "furo"
 html_static_path = ["_static"]
-html_css_files = [
-    "enhanced-design.css",      # Complete modern design system
-    "breadcrumb-navigation.css", # Breadcrumb navigation for Furo
-    "mermaid-custom.css",       # Mermaid diagram theming
-    "tippy-enhancements.css",   # Enhanced tooltip system
-]
-html_js_files = [
-    "js/api-enhancements.js",
-]
+html_css_files = {repr(style.css_files)}
+html_js_files = {repr(style.js_files)}
 
-html_theme_options = {{
-    "light_logo": "logo-light.png",
-    "dark_logo": "logo-dark.png",
-    "sidebar_hide_name": False,
-    "navigation_with_keys": True,
-    "top_of_page_buttons": ["view", "edit"],
-}}
+html_theme_options = {repr(style.theme_options)}
 
 html_favicon = "_static/favicon.ico"
 html_title = f"{{project}} Documentation"
@@ -726,19 +758,18 @@ coverage_show_missing_items = True
 
 def setup(app):
     """Sphinx setup hook."""
-    # Modern CSS files (matches html_css_files)  
-    css_files = [
-        "enhanced-design.css",
-        "breadcrumb-navigation.css",
-        "mermaid-custom.css", 
-        "tippy-enhancements.css"
-    ]
+    # CSS files based on template style ({style_name})
+    css_files = {repr(style.css_files)}
     for css_file in css_files:
         app.add_css_file(css_file)
     
+    # JS files based on template style
+    js_files = {repr(style.js_files)}
+    for js_file in js_files:
+        app.add_js_file(js_file)
+    
     # Legacy fallback
     app.add_css_file("css/custom.css")
-    app.add_js_file("js/api-enhancements.js")
 '''
 
         return conf_content
@@ -975,9 +1006,12 @@ def cli(ctx):
     help="Use shared config module vs inline config (default: shared)",
 )
 @click.option(
-    "--modern-design/--classic-design",
-    default=True,
-    help="Use modern design templates with enhanced styling (default: modern)",
+    "--template-style",
+    type=click.Choice(
+        ["minimal", "modern", "classic", "default"], case_sensitive=False
+    ),
+    default="minimal",
+    help="Choose template style: minimal (clean Furo), modern (cards/gradients), classic (API badges), default (plain)",
 )
 def init(
     packages_dir,
@@ -994,7 +1028,7 @@ def init(
     with_cli,
     with_tutorials,
     use_shared_config,
-    modern_design,
+    template_style,
 ):
     """Initialize documentation for any Python project.
 
@@ -1132,6 +1166,7 @@ def init(
         "with_cli": with_cli,
         "with_tutorials": with_tutorials,
         "use_shared_config": use_shared_config,
+        "template_style": template_style,
     }
     initializer = DocsInitializer(project_path, analysis, doc_config, quiet=quiet)
 

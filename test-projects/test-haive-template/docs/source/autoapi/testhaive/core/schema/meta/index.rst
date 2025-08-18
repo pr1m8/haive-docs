@@ -6,9 +6,6 @@ testhaive.core.schema.meta
 Meta-schema classes for advanced state management.
 
 
-.. autolink-examples:: testhaive.core.schema.meta
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Meta-schema classes for advanced state management.
 
    Meta-schema classes for advanced state management.
 
-
-   .. autolink-examples:: testhaive.core.schema.meta
-      :collapse:
 
 
       
@@ -64,13 +58,6 @@ Meta-schema classes for advanced state management.
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: MetaStateSchema
-               :collapse:
-
             .. py:attribute:: agent_states
                :type:  Dict[str, Dict[str, Any]]
                :value: None
@@ -93,13 +80,6 @@ Meta-schema classes for advanced state management.
 
             :param \*\*kwargs: Keyword arguments for schema fields
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateProjection
-               :collapse:
 
             .. py:attribute:: projection_fields
                :type:  List[str]
@@ -129,13 +109,6 @@ Meta-schema classes for advanced state management.
 
             :param \*\*kwargs: Keyword arguments for schema fields
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateTransfer
-               :collapse:
 
             .. py:attribute:: source_agent
                :type:  str

@@ -6,9 +6,6 @@ testhaive.agents.simple
 Simple agent implementations.
 
 
-.. autolink-examples:: testhaive.agents.simple
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Simple agent implementations.
 
    Simple agent implementations.
 
-
-   .. autolink-examples:: testhaive.agents.simple
-      :collapse:
 
 
 
@@ -108,13 +102,6 @@ Simple agent implementations.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: SimpleAgent
-               :collapse:
-
             .. py:method:: get_stats() -> Dict[str, Any]
 
                Get agent execution statistics.
@@ -122,17 +109,11 @@ Simple agent implementations.
                :returns: Dictionary with execution stats
 
 
-               .. autolink-examples:: get_stats
-                  :collapse:
-
 
             .. py:method:: reset() -> None
 
                Reset agent state.
 
-
-               .. autolink-examples:: reset
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -143,9 +124,6 @@ Simple agent implementations.
 
                :returns: Processed output text
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _execution_count

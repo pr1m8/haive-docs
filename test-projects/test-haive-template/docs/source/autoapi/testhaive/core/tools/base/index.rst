@@ -6,9 +6,6 @@ testhaive.core.tools.base
 Base tool class for testhaive framework.
 
 
-.. autolink-examples:: testhaive.core.tools.base
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Base tool class for testhaive framework.
 
    Base tool class for testhaive framework.
 
-
-   .. autolink-examples:: testhaive.core.tools.base
-      :collapse:
 
 
       
@@ -65,20 +59,10 @@ Base tool class for testhaive framework.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseTool
-               :collapse:
-
             .. py:method:: execute(**kwargs) -> Dict[str, Any]
 
                Execute the tool with given parameters.
 
-
-               .. autolink-examples:: execute
-                  :collapse:
 
 
             .. py:attribute:: description

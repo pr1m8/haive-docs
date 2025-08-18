@@ -6,9 +6,6 @@ testhaive.agents.react
 React agent implementations with reasoning and action loops.
 
 
-.. autolink-examples:: testhaive.agents.react
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ React agent implementations with reasoning and action loops.
 
    React agent implementations with reasoning and action loops.
 
-
-   .. autolink-examples:: testhaive.agents.react
-      :collapse:
 
 
 
@@ -152,20 +146,10 @@ React agent implementations with reasoning and action loops.
             Initialize ReactAgent with React-specific setup.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReactAgent
-               :collapse:
-
             .. py:method:: _can_provide_response() -> bool
 
                Check if sufficient information is available to provide a response.
 
-
-               .. autolink-examples:: _can_provide_response
-                  :collapse:
 
 
             .. py:method:: _execute_actions(actions: List[ActionPlan]) -> List[Dict[str, Any]]
@@ -173,17 +157,11 @@ React agent implementations with reasoning and action loops.
                Execute planned actions.
 
 
-               .. autolink-examples:: _execute_actions
-                  :collapse:
-
 
             .. py:method:: _execute_tool_call(action: ActionPlan) -> Dict[str, Any]
 
                Execute a tool call action.
 
-
-               .. autolink-examples:: _execute_tool_call
-                  :collapse:
 
 
             .. py:method:: _generate_final_response() -> str
@@ -191,17 +169,11 @@ React agent implementations with reasoning and action loops.
                Generate final response based on reasoning and observations.
 
 
-               .. autolink-examples:: _generate_final_response
-                  :collapse:
-
 
             .. py:method:: _generate_thoughts() -> List[ThoughtProcess]
 
                Generate thoughts for current reasoning step.
 
-
-               .. autolink-examples:: _generate_thoughts
-                  :collapse:
 
 
             .. py:method:: _initialize_reasoning_session(input_text: str) -> None
@@ -209,17 +181,11 @@ React agent implementations with reasoning and action loops.
                Initialize a new reasoning session.
 
 
-               .. autolink-examples:: _initialize_reasoning_session
-                  :collapse:
-
 
             .. py:method:: _perform_reflection() -> None
 
                Perform reflection on current progress.
 
-
-               .. autolink-examples:: _perform_reflection
-                  :collapse:
 
 
             .. py:method:: _plan_actions(thoughts: List[ThoughtProcess]) -> List[ActionPlan]
@@ -227,26 +193,17 @@ React agent implementations with reasoning and action loops.
                Plan actions based on current thoughts.
 
 
-               .. autolink-examples:: _plan_actions
-                  :collapse:
-
 
             .. py:method:: _process_observations(results: List[Dict[str, Any]]) -> List[str]
 
                Process and analyze action results.
 
 
-               .. autolink-examples:: _process_observations
-                  :collapse:
-
 
             .. py:method:: _should_reflect() -> bool
 
                Determine if reflection should be performed.
 
-
-               .. autolink-examples:: _should_reflect
-                  :collapse:
 
 
             .. py:method:: arun(input_text: str) -> str
@@ -260,17 +217,11 @@ React agent implementations with reasoning and action loops.
                :returns: Final response after reasoning and action cycle
 
 
-               .. autolink-examples:: arun
-                  :collapse:
-
 
             .. py:method:: clear_history() -> None
 
                Clear reasoning and action history.
 
-
-               .. autolink-examples:: clear_history
-                  :collapse:
 
 
             .. py:method:: get_reasoning_summary() -> Dict[str, Any]
@@ -279,9 +230,6 @@ React agent implementations with reasoning and action loops.
 
                :returns: Dictionary containing reasoning statistics and history
 
-
-               .. autolink-examples:: get_reasoning_summary
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -314,9 +262,6 @@ React agent implementations with reasoning and action loops.
                        "and provide policy recommendations"
                    )
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _reasoning_context
@@ -454,20 +399,10 @@ React agent implementations with reasoning and action loops.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReactConfig
-               :collapse:
-
             .. py:method:: validate_engine_mode(v)
 
                Ensure engine is configured for React mode.
 
-
-               .. autolink-examples:: validate_engine_mode
-                  :collapse:
 
 
             .. py:attribute:: action_temperature

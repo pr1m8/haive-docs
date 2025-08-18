@@ -6,17 +6,11 @@ testhaive.tools
 TestHaive Tools - Tool implementations.
 
 
-.. autolink-examples:: testhaive.tools
-   :collapse:
-
 
 .. autoapi-nested-parse::
 
    TestHaive Tools - Tool implementations.
 
-
-   .. autolink-examples:: testhaive.tools
-      :collapse:
 
 
       

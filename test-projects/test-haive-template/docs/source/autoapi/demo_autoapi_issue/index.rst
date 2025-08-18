@@ -9,9 +9,6 @@ This script simulates what AutoAPI discovers in our complex nested structure
 and shows how it creates a flat alphabetical list instead of hierarchical organization.
 
 
-.. autolink-examples:: demo_autoapi_issue
-   :collapse:
-
 
 .. raw:: html
    
@@ -25,9 +22,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
    This script simulates what AutoAPI discovers in our complex nested structure
    and shows how it creates a flat alphabetical list instead of hierarchical organization.
 
-
-   .. autolink-examples:: demo_autoapi_issue
-      :collapse:
 
 
       
@@ -65,9 +59,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
             Discover classes in a Python file (simulates AutoAPI discovery).
 
 
-            .. autolink-examples:: discover_classes_in_file
-               :collapse:
-
 
       .. grid-item-card:: 
          :class-card: sd-border-0 sd-shadow-sm
@@ -77,9 +68,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
 
             Demonstrate the AutoAPI flattening issue.
 
-
-            .. autolink-examples:: main
-               :collapse:
 
 
       .. grid-item-card:: 
@@ -91,9 +79,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
             Scan all packages and discover their structure.
 
 
-            .. autolink-examples:: scan_packages
-               :collapse:
-
 
       .. grid-item-card:: 
          :class-card: sd-border-0 sd-shadow-sm
@@ -104,9 +89,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
             Show the current flat AutoAPI structure (the problem).
 
 
-            .. autolink-examples:: show_flat_structure
-               :collapse:
-
 
       .. grid-item-card:: 
          :class-card: sd-border-0 sd-shadow-sm
@@ -116,9 +98,6 @@ and shows how it creates a flat alphabetical list instead of hierarchical organi
 
             Show the desired hierarchical structure (the solution).
 
-
-            .. autolink-examples:: show_hierarchical_structure
-               :collapse:
 
 
 

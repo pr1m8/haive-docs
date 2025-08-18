@@ -10,9 +10,6 @@ pattern for AI agents. ReactAgent can reason about problems, plan actions, execu
 and reflect on results in an iterative loop.
 
 
-.. autolink-examples:: testhaive.agents.react.agent
-   :collapse:
-
 
 .. raw:: html
    
@@ -27,9 +24,6 @@ and reflect on results in an iterative loop.
    pattern for AI agents. ReactAgent can reason about problems, plan actions, execute tools,
    and reflect on results in an iterative loop.
 
-
-   .. autolink-examples:: testhaive.agents.react.agent
-      :collapse:
 
 
       
@@ -141,22 +135,12 @@ and reflect on results in an iterative loop.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ActionPlan
-               :collapse:
-
             .. py:method:: add_fallback(fallback_action: str) -> None
 
                Add a fallback action.
 
                :param fallback_action: ID or description of fallback action
 
-
-               .. autolink-examples:: add_fallback
-                  :collapse:
 
 
             .. py:method:: evaluate_success(actual_outcome: Dict[str, Any]) -> bool
@@ -167,9 +151,6 @@ and reflect on results in an iterative loop.
 
                :returns: True if action was successful, False otherwise
 
-
-               .. autolink-examples:: evaluate_success
-                  :collapse:
 
 
             .. py:attribute:: action_id
@@ -266,13 +247,6 @@ and reflect on results in an iterative loop.
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ActionType
-               :collapse:
 
             .. py:attribute:: DECISION
                :value: 'decision'
@@ -395,20 +369,10 @@ and reflect on results in an iterative loop.
             Initialize ReactAgent with React-specific setup.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReactAgent
-               :collapse:
-
             .. py:method:: _can_provide_response() -> bool
 
                Check if sufficient information is available to provide a response.
 
-
-               .. autolink-examples:: _can_provide_response
-                  :collapse:
 
 
             .. py:method:: _execute_actions(actions: List[ActionPlan]) -> List[Dict[str, Any]]
@@ -416,17 +380,11 @@ and reflect on results in an iterative loop.
                Execute planned actions.
 
 
-               .. autolink-examples:: _execute_actions
-                  :collapse:
-
 
             .. py:method:: _execute_tool_call(action: ActionPlan) -> Dict[str, Any]
 
                Execute a tool call action.
 
-
-               .. autolink-examples:: _execute_tool_call
-                  :collapse:
 
 
             .. py:method:: _generate_final_response() -> str
@@ -434,17 +392,11 @@ and reflect on results in an iterative loop.
                Generate final response based on reasoning and observations.
 
 
-               .. autolink-examples:: _generate_final_response
-                  :collapse:
-
 
             .. py:method:: _generate_thoughts() -> List[ThoughtProcess]
 
                Generate thoughts for current reasoning step.
 
-
-               .. autolink-examples:: _generate_thoughts
-                  :collapse:
 
 
             .. py:method:: _initialize_reasoning_session(input_text: str) -> None
@@ -452,17 +404,11 @@ and reflect on results in an iterative loop.
                Initialize a new reasoning session.
 
 
-               .. autolink-examples:: _initialize_reasoning_session
-                  :collapse:
-
 
             .. py:method:: _perform_reflection() -> None
 
                Perform reflection on current progress.
 
-
-               .. autolink-examples:: _perform_reflection
-                  :collapse:
 
 
             .. py:method:: _plan_actions(thoughts: List[ThoughtProcess]) -> List[ActionPlan]
@@ -470,26 +416,17 @@ and reflect on results in an iterative loop.
                Plan actions based on current thoughts.
 
 
-               .. autolink-examples:: _plan_actions
-                  :collapse:
-
 
             .. py:method:: _process_observations(results: List[Dict[str, Any]]) -> List[str]
 
                Process and analyze action results.
 
 
-               .. autolink-examples:: _process_observations
-                  :collapse:
-
 
             .. py:method:: _should_reflect() -> bool
 
                Determine if reflection should be performed.
 
-
-               .. autolink-examples:: _should_reflect
-                  :collapse:
 
 
             .. py:method:: arun(input_text: str) -> str
@@ -503,17 +440,11 @@ and reflect on results in an iterative loop.
                :returns: Final response after reasoning and action cycle
 
 
-               .. autolink-examples:: arun
-                  :collapse:
-
 
             .. py:method:: clear_history() -> None
 
                Clear reasoning and action history.
 
-
-               .. autolink-examples:: clear_history
-                  :collapse:
 
 
             .. py:method:: get_reasoning_summary() -> Dict[str, Any]
@@ -522,9 +453,6 @@ and reflect on results in an iterative loop.
 
                :returns: Dictionary containing reasoning statistics and history
 
-
-               .. autolink-examples:: get_reasoning_summary
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -557,9 +485,6 @@ and reflect on results in an iterative loop.
                        "and provide policy recommendations"
                    )
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _reasoning_context
@@ -697,20 +622,10 @@ and reflect on results in an iterative loop.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReactConfig
-               :collapse:
-
             .. py:method:: validate_engine_mode(v)
 
                Ensure engine is configured for React mode.
 
-
-               .. autolink-examples:: validate_engine_mode
-                  :collapse:
 
 
             .. py:attribute:: action_temperature
@@ -797,13 +712,6 @@ and reflect on results in an iterative loop.
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReasoningMode
-               :collapse:
 
             .. py:attribute:: ADAPTIVE
                :value: 'adaptive'
@@ -896,22 +804,12 @@ and reflect on results in an iterative loop.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ThoughtProcess
-               :collapse:
-
             .. py:method:: add_dependency(thought_id: str) -> None
 
                Add a dependency to another thought.
 
                :param thought_id: ID of the thought this depends on
 
-
-               .. autolink-examples:: add_dependency
-                  :collapse:
 
 
             .. py:method:: update_confidence(new_confidence: float) -> None
@@ -920,9 +818,6 @@ and reflect on results in an iterative loop.
 
                :param new_confidence: New confidence level (0.0-1.0)
 
-
-               .. autolink-examples:: update_confidence
-                  :collapse:
 
 
             .. py:attribute:: confidence

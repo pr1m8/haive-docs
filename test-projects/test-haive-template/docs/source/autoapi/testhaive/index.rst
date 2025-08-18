@@ -6,17 +6,11 @@ testhaive
 TestHaive Framework - Agents namespace package.
 
 
-.. autolink-examples:: testhaive
-   :collapse:
-
 
 .. autoapi-nested-parse::
 
    TestHaive Framework - Agents namespace package.
 
-
-   .. autolink-examples:: testhaive
-      :collapse:
 
 
 

@@ -8,9 +8,6 @@ TestHaive Agents - Agent implementations.
 This package mimics the structure of haive.agents for testing documentation generation.
 
 
-.. autolink-examples:: testhaive.agents
-   :collapse:
-
 
 .. raw:: html
    
@@ -23,9 +20,6 @@ This package mimics the structure of haive.agents for testing documentation gene
 
    This package mimics the structure of haive.agents for testing documentation generation.
 
-
-   .. autolink-examples:: testhaive.agents
-      :collapse:
 
 
 
@@ -157,20 +151,10 @@ This package mimics the structure of haive.agents for testing documentation gene
             Initialize ReactAgent with React-specific setup.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ReactAgent
-               :collapse:
-
             .. py:method:: _can_provide_response() -> bool
 
                Check if sufficient information is available to provide a response.
 
-
-               .. autolink-examples:: _can_provide_response
-                  :collapse:
 
 
             .. py:method:: _execute_actions(actions: List[ActionPlan]) -> List[Dict[str, Any]]
@@ -178,17 +162,11 @@ This package mimics the structure of haive.agents for testing documentation gene
                Execute planned actions.
 
 
-               .. autolink-examples:: _execute_actions
-                  :collapse:
-
 
             .. py:method:: _execute_tool_call(action: ActionPlan) -> Dict[str, Any]
 
                Execute a tool call action.
 
-
-               .. autolink-examples:: _execute_tool_call
-                  :collapse:
 
 
             .. py:method:: _generate_final_response() -> str
@@ -196,17 +174,11 @@ This package mimics the structure of haive.agents for testing documentation gene
                Generate final response based on reasoning and observations.
 
 
-               .. autolink-examples:: _generate_final_response
-                  :collapse:
-
 
             .. py:method:: _generate_thoughts() -> List[ThoughtProcess]
 
                Generate thoughts for current reasoning step.
 
-
-               .. autolink-examples:: _generate_thoughts
-                  :collapse:
 
 
             .. py:method:: _initialize_reasoning_session(input_text: str) -> None
@@ -214,17 +186,11 @@ This package mimics the structure of haive.agents for testing documentation gene
                Initialize a new reasoning session.
 
 
-               .. autolink-examples:: _initialize_reasoning_session
-                  :collapse:
-
 
             .. py:method:: _perform_reflection() -> None
 
                Perform reflection on current progress.
 
-
-               .. autolink-examples:: _perform_reflection
-                  :collapse:
 
 
             .. py:method:: _plan_actions(thoughts: List[ThoughtProcess]) -> List[ActionPlan]
@@ -232,26 +198,17 @@ This package mimics the structure of haive.agents for testing documentation gene
                Plan actions based on current thoughts.
 
 
-               .. autolink-examples:: _plan_actions
-                  :collapse:
-
 
             .. py:method:: _process_observations(results: List[Dict[str, Any]]) -> List[str]
 
                Process and analyze action results.
 
 
-               .. autolink-examples:: _process_observations
-                  :collapse:
-
 
             .. py:method:: _should_reflect() -> bool
 
                Determine if reflection should be performed.
 
-
-               .. autolink-examples:: _should_reflect
-                  :collapse:
 
 
             .. py:method:: arun(input_text: str) -> str
@@ -265,17 +222,11 @@ This package mimics the structure of haive.agents for testing documentation gene
                :returns: Final response after reasoning and action cycle
 
 
-               .. autolink-examples:: arun
-                  :collapse:
-
 
             .. py:method:: clear_history() -> None
 
                Clear reasoning and action history.
 
-
-               .. autolink-examples:: clear_history
-                  :collapse:
 
 
             .. py:method:: get_reasoning_summary() -> Dict[str, Any]
@@ -284,9 +235,6 @@ This package mimics the structure of haive.agents for testing documentation gene
 
                :returns: Dictionary containing reasoning statistics and history
 
-
-               .. autolink-examples:: get_reasoning_summary
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -319,9 +267,6 @@ This package mimics the structure of haive.agents for testing documentation gene
                        "and provide policy recommendations"
                    )
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _reasoning_context
@@ -419,13 +364,6 @@ This package mimics the structure of haive.agents for testing documentation gene
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: SimpleAgent
-               :collapse:
-
             .. py:method:: get_stats() -> Dict[str, Any]
 
                Get agent execution statistics.
@@ -433,17 +371,11 @@ This package mimics the structure of haive.agents for testing documentation gene
                :returns: Dictionary with execution stats
 
 
-               .. autolink-examples:: get_stats
-                  :collapse:
-
 
             .. py:method:: reset() -> None
 
                Reset agent state.
 
-
-               .. autolink-examples:: reset
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -454,9 +386,6 @@ This package mimics the structure of haive.agents for testing documentation gene
 
                :returns: Processed output text
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _execution_count

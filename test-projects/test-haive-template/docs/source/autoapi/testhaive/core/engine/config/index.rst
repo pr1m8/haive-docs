@@ -8,9 +8,6 @@ Configuration classes for testhaive.core.engine (mimics AugLLMConfig).
 This module provides configuration management similar to AugLLMConfig in Haive.
 
 
-.. autolink-examples:: testhaive.core.engine.config
-   :collapse:
-
 
 .. raw:: html
    
@@ -23,9 +20,6 @@ This module provides configuration management similar to AugLLMConfig in Haive.
 
    This module provides configuration management similar to AugLLMConfig in Haive.
 
-
-   .. autolink-examples:: testhaive.core.engine.config
-      :collapse:
 
 
       
@@ -64,13 +58,6 @@ This module provides configuration management similar to AugLLMConfig in Haive.
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: EngineMode
-               :collapse:
 
             .. py:attribute:: MULTI_AGENT
                :value: 'multi_agent'
@@ -148,22 +135,12 @@ This module provides configuration management similar to AugLLMConfig in Haive.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: TestLLMConfig
-               :collapse:
-
             .. py:method:: add_tool(tool_name: str) -> None
 
                Add a tool to the configuration.
 
                :param tool_name: Name of the tool to add
 
-
-               .. autolink-examples:: add_tool
-                  :collapse:
 
 
             .. py:method:: get_summary() -> Dict[str, Any]
@@ -173,9 +150,6 @@ This module provides configuration management similar to AugLLMConfig in Haive.
                :returns: Dictionary containing configuration summary
 
 
-               .. autolink-examples:: get_summary
-                  :collapse:
-
 
             .. py:method:: remove_tool(tool_name: str) -> None
 
@@ -183,9 +157,6 @@ This module provides configuration management similar to AugLLMConfig in Haive.
 
                :param tool_name: Name of the tool to remove
 
-
-               .. autolink-examples:: remove_tool
-                  :collapse:
 
 
             .. py:method:: with_tools(tools: List[str]) -> TestLLMConfig
@@ -196,9 +167,6 @@ This module provides configuration management similar to AugLLMConfig in Haive.
 
                :returns: New TestLLMConfig instance with tools
 
-
-               .. autolink-examples:: with_tools
-                  :collapse:
 
 
             .. py:attribute:: max_tokens

@@ -9,9 +9,6 @@ This module provides foundational schema classes that all other schemas inherit 
 It includes validation mixins, serialization support, and state management patterns.
 
 
-.. autolink-examples:: testhaive.core.schema.base
-   :collapse:
-
 
 .. raw:: html
    
@@ -25,9 +22,6 @@ It includes validation mixins, serialization support, and state management patte
    This module provides foundational schema classes that all other schemas inherit from.
    It includes validation mixins, serialization support, and state management patterns.
 
-
-   .. autolink-examples:: testhaive.core.schema.base
-      :collapse:
 
 
       
@@ -135,20 +129,10 @@ It includes validation mixins, serialization support, and state management patte
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseSchema
-               :collapse:
-
             .. py:class:: Config
 
                Pydantic configuration for BaseSchema.
 
-
-               .. autolink-examples:: Config
-                  :collapse:
 
                .. py:attribute:: extra
                   :value: 'forbid'
@@ -174,26 +158,17 @@ It includes validation mixins, serialization support, and state management patte
                Validate business logic rules.
 
 
-               .. autolink-examples:: _validate_business_rules
-                  :collapse:
-
 
             .. py:method:: _validate_fields() -> None
 
                Validate individual field constraints.
 
 
-               .. autolink-examples:: _validate_fields
-                  :collapse:
-
 
             .. py:method:: _validate_relationships() -> None
 
                Validate relationships between fields.
 
-
-               .. autolink-examples:: _validate_relationships
-                  :collapse:
 
 
             .. py:method:: deserialize(data: Union[str, Dict[str, Any], bytes], format: SerializationFormat = SerializationFormat.JSON) -> T
@@ -220,9 +195,6 @@ It includes validation mixins, serialization support, and state management patte
                    schema = MySchema.deserialize(data_dict, SerializationFormat.DICT)
 
 
-               .. autolink-examples:: deserialize
-                  :collapse:
-
 
             .. py:method:: get_metadata(key: str, default: Any = None) -> Any
 
@@ -234,9 +206,6 @@ It includes validation mixins, serialization support, and state management patte
                :returns: Metadata value or default
 
 
-               .. autolink-examples:: get_metadata
-                  :collapse:
-
 
             .. py:method:: get_schema_info() -> Dict[str, Any]
 
@@ -244,9 +213,6 @@ It includes validation mixins, serialization support, and state management patte
 
                :returns: Dictionary containing schema metadata and status
 
-
-               .. autolink-examples:: get_schema_info
-                  :collapse:
 
 
             .. py:method:: serialize(format: SerializationFormat = SerializationFormat.JSON) -> Union[str, Dict[str, Any], bytes]
@@ -270,9 +236,6 @@ It includes validation mixins, serialization support, and state management patte
                    data_dict = schema.serialize(SerializationFormat.DICT)
 
 
-               .. autolink-examples:: serialize
-                  :collapse:
-
 
             .. py:method:: set_metadata(key: str, value: Any) -> None
 
@@ -282,17 +245,11 @@ It includes validation mixins, serialization support, and state management patte
                :param value: Metadata value
 
 
-               .. autolink-examples:: set_metadata
-                  :collapse:
-
 
             .. py:method:: update_timestamp() -> None
 
                Update the updated_at timestamp to current time.
 
-
-               .. autolink-examples:: update_timestamp
-                  :collapse:
 
 
             .. py:method:: validate_all() -> bool
@@ -320,9 +277,6 @@ It includes validation mixins, serialization support, and state management patte
                    schema.set_validation_level(ValidationLevel.STRICT)
                    is_valid = schema.validate_all()
 
-
-               .. autolink-examples:: validate_all
-                  :collapse:
 
 
             .. py:attribute:: created_at
@@ -379,13 +333,6 @@ It includes validation mixins, serialization support, and state management patte
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: SerializationFormat
-               :collapse:
 
             .. py:attribute:: COMPRESSED
                :value: 'compressed'
@@ -487,22 +434,12 @@ It includes validation mixins, serialization support, and state management patte
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateSchema
-               :collapse:
-
             .. py:method:: can_rollback() -> bool
 
                Check if this state can be rolled back to its previous state.
 
                :returns: True if rollback is possible, False otherwise
 
-
-               .. autolink-examples:: can_rollback
-                  :collapse:
 
 
             .. py:method:: create_transition(**changes) -> T
@@ -532,9 +469,6 @@ It includes validation mixins, serialization support, and state management patte
                    )
 
 
-               .. autolink-examples:: create_transition
-                  :collapse:
-
 
             .. py:method:: get_state_summary() -> Dict[str, Any]
 
@@ -542,9 +476,6 @@ It includes validation mixins, serialization support, and state management patte
 
                :returns: Dictionary containing state summary information
 
-
-               .. autolink-examples:: get_state_summary
-                  :collapse:
 
 
             .. py:method:: get_transition_history() -> List[str]
@@ -559,9 +490,6 @@ It includes validation mixins, serialization support, and state management patte
                   this would traverse the state chain to build the complete history.
 
 
-               .. autolink-examples:: get_transition_history
-                  :collapse:
-
 
             .. py:method:: has_changed_since(state_id: str) -> bool
 
@@ -572,9 +500,6 @@ It includes validation mixins, serialization support, and state management patte
                :returns: True if state has changed, False otherwise
 
 
-               .. autolink-examples:: has_changed_since
-                  :collapse:
-
 
             .. py:method:: mark_final() -> None
 
@@ -582,9 +507,6 @@ It includes validation mixins, serialization support, and state management patte
 
                Final states cannot be transitioned from or rolled back.
 
-
-               .. autolink-examples:: mark_final
-                  :collapse:
 
 
             .. py:method:: rollback() -> Optional[StateSchema]
@@ -601,9 +523,6 @@ It includes validation mixins, serialization support, and state management patte
 
                :raises ValueError: If rollback is not possible
 
-
-               .. autolink-examples:: rollback
-                  :collapse:
 
 
             .. py:attribute:: is_final
@@ -667,13 +586,6 @@ It includes validation mixins, serialization support, and state management patte
             Initialize self.  See help(type(self)) for accurate signature.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ValidationLevel
-               :collapse:
-
             .. py:attribute:: DISABLED
                :value: 'disabled'
 
@@ -731,22 +643,12 @@ It includes validation mixins, serialization support, and state management patte
             Initialize validation mixin with default settings.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ValidationMixin
-               :collapse:
-
             .. py:method:: add_validation_error(message: str) -> None
 
                Add a validation error message.
 
                :param message: Error message to add
 
-
-               .. autolink-examples:: add_validation_error
-                  :collapse:
 
 
             .. py:method:: add_validation_warning(message: str) -> None
@@ -756,17 +658,11 @@ It includes validation mixins, serialization support, and state management patte
                :param message: Warning message to add
 
 
-               .. autolink-examples:: add_validation_warning
-                  :collapse:
-
 
             .. py:method:: clear_validation_messages() -> None
 
                Clear all validation errors and warnings.
 
-
-               .. autolink-examples:: clear_validation_messages
-                  :collapse:
 
 
             .. py:method:: get_validation_errors() -> List[str]
@@ -776,9 +672,6 @@ It includes validation mixins, serialization support, and state management patte
                :returns: List of validation error messages
 
 
-               .. autolink-examples:: get_validation_errors
-                  :collapse:
-
 
             .. py:method:: get_validation_warnings() -> List[str]
 
@@ -786,9 +679,6 @@ It includes validation mixins, serialization support, and state management patte
 
                :returns: List of validation warning messages
 
-
-               .. autolink-examples:: get_validation_warnings
-                  :collapse:
 
 
             .. py:method:: set_validation_level(level: ValidationLevel) -> None
@@ -808,9 +698,6 @@ It includes validation mixins, serialization support, and state management patte
                    schema.set_validation_level(ValidationLevel.DISABLED)
 
 
-               .. autolink-examples:: set_validation_level
-                  :collapse:
-
 
             .. py:method:: validate_all() -> bool
                :abstractmethod:
@@ -822,9 +709,6 @@ It includes validation mixins, serialization support, and state management patte
 
                .. note:: Subclasses must implement this method to define their validation logic.
 
-
-               .. autolink-examples:: validate_all
-                  :collapse:
 
 
             .. py:attribute:: _validation_errors

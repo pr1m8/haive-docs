@@ -8,9 +8,6 @@ Simple agent implementation (mimics SimpleAgent from haive.agents).
 This module provides a basic agent implementation for testing AutoAPI organization.
 
 
-.. autolink-examples:: testhaive.agents.simple.agent
-   :collapse:
-
 
 .. raw:: html
    
@@ -23,9 +20,6 @@ This module provides a basic agent implementation for testing AutoAPI organizati
 
    This module provides a basic agent implementation for testing AutoAPI organization.
 
-
-   .. autolink-examples:: testhaive.agents.simple.agent
-      :collapse:
 
 
       
@@ -103,13 +97,6 @@ This module provides a basic agent implementation for testing AutoAPI organizati
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: SimpleAgent
-               :collapse:
-
             .. py:method:: get_stats() -> Dict[str, Any]
 
                Get agent execution statistics.
@@ -117,17 +104,11 @@ This module provides a basic agent implementation for testing AutoAPI organizati
                :returns: Dictionary with execution stats
 
 
-               .. autolink-examples:: get_stats
-                  :collapse:
-
 
             .. py:method:: reset() -> None
 
                Reset agent state.
 
-
-               .. autolink-examples:: reset
-                  :collapse:
 
 
             .. py:method:: run(input_text: str) -> str
@@ -138,9 +119,6 @@ This module provides a basic agent implementation for testing AutoAPI organizati
 
                :returns: Processed output text
 
-
-               .. autolink-examples:: run
-                  :collapse:
 
 
             .. py:attribute:: _execution_count
@@ -191,13 +169,6 @@ This module provides a basic agent implementation for testing AutoAPI organizati
 
             `self` is explicitly positional-only to allow `self` as a field name.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: SimpleAgentConfig
-               :collapse:
 
             .. py:attribute:: engine
                :type:  testhaive.core.engine.config.TestLLMConfig

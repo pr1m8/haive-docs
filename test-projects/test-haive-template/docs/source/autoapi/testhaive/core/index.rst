@@ -8,9 +8,6 @@ TestHaive Core - Core framework components.
 This package mimics the structure of haive.core for testing documentation generation.
 
 
-.. autolink-examples:: testhaive.core
-   :collapse:
-
 
 .. raw:: html
    
@@ -23,9 +20,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
    This package mimics the structure of haive.core for testing documentation generation.
 
-
-   .. autolink-examples:: testhaive.core
-      :collapse:
 
 
 
@@ -137,20 +131,10 @@ This package mimics the structure of haive.core for testing documentation genera
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseSchema
-               :collapse:
-
             .. py:class:: Config
 
                Pydantic configuration for BaseSchema.
 
-
-               .. autolink-examples:: Config
-                  :collapse:
 
                .. py:attribute:: extra
                   :value: 'forbid'
@@ -176,26 +160,17 @@ This package mimics the structure of haive.core for testing documentation genera
                Validate business logic rules.
 
 
-               .. autolink-examples:: _validate_business_rules
-                  :collapse:
-
 
             .. py:method:: _validate_fields() -> None
 
                Validate individual field constraints.
 
 
-               .. autolink-examples:: _validate_fields
-                  :collapse:
-
 
             .. py:method:: _validate_relationships() -> None
 
                Validate relationships between fields.
 
-
-               .. autolink-examples:: _validate_relationships
-                  :collapse:
 
 
             .. py:method:: deserialize(data: Union[str, Dict[str, Any], bytes], format: SerializationFormat = SerializationFormat.JSON) -> T
@@ -222,9 +197,6 @@ This package mimics the structure of haive.core for testing documentation genera
                    schema = MySchema.deserialize(data_dict, SerializationFormat.DICT)
 
 
-               .. autolink-examples:: deserialize
-                  :collapse:
-
 
             .. py:method:: get_metadata(key: str, default: Any = None) -> Any
 
@@ -236,9 +208,6 @@ This package mimics the structure of haive.core for testing documentation genera
                :returns: Metadata value or default
 
 
-               .. autolink-examples:: get_metadata
-                  :collapse:
-
 
             .. py:method:: get_schema_info() -> Dict[str, Any]
 
@@ -246,9 +215,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                :returns: Dictionary containing schema metadata and status
 
-
-               .. autolink-examples:: get_schema_info
-                  :collapse:
 
 
             .. py:method:: serialize(format: SerializationFormat = SerializationFormat.JSON) -> Union[str, Dict[str, Any], bytes]
@@ -272,9 +238,6 @@ This package mimics the structure of haive.core for testing documentation genera
                    data_dict = schema.serialize(SerializationFormat.DICT)
 
 
-               .. autolink-examples:: serialize
-                  :collapse:
-
 
             .. py:method:: set_metadata(key: str, value: Any) -> None
 
@@ -284,17 +247,11 @@ This package mimics the structure of haive.core for testing documentation genera
                :param value: Metadata value
 
 
-               .. autolink-examples:: set_metadata
-                  :collapse:
-
 
             .. py:method:: update_timestamp() -> None
 
                Update the updated_at timestamp to current time.
 
-
-               .. autolink-examples:: update_timestamp
-                  :collapse:
 
 
             .. py:method:: validate_all() -> bool
@@ -322,9 +279,6 @@ This package mimics the structure of haive.core for testing documentation genera
                    schema.set_validation_level(ValidationLevel.STRICT)
                    is_valid = schema.validate_all()
 
-
-               .. autolink-examples:: validate_all
-                  :collapse:
 
 
             .. py:attribute:: created_at
@@ -371,20 +325,10 @@ This package mimics the structure of haive.core for testing documentation genera
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseTool
-               :collapse:
-
             .. py:method:: execute(**kwargs) -> Dict[str, Any]
 
                Execute the tool with given parameters.
 
-
-               .. autolink-examples:: execute
-                  :collapse:
 
 
             .. py:attribute:: description
@@ -413,13 +357,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: EngineMode
-               :collapse:
 
             .. py:attribute:: MULTI_AGENT
                :value: 'multi_agent'
@@ -521,22 +458,12 @@ This package mimics the structure of haive.core for testing documentation genera
             :param \*\*kwargs: Keyword arguments for schema fields
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: StateSchema
-               :collapse:
-
             .. py:method:: can_rollback() -> bool
 
                Check if this state can be rolled back to its previous state.
 
                :returns: True if rollback is possible, False otherwise
 
-
-               .. autolink-examples:: can_rollback
-                  :collapse:
 
 
             .. py:method:: create_transition(**changes) -> T
@@ -566,9 +493,6 @@ This package mimics the structure of haive.core for testing documentation genera
                    )
 
 
-               .. autolink-examples:: create_transition
-                  :collapse:
-
 
             .. py:method:: get_state_summary() -> Dict[str, Any]
 
@@ -576,9 +500,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                :returns: Dictionary containing state summary information
 
-
-               .. autolink-examples:: get_state_summary
-                  :collapse:
 
 
             .. py:method:: get_transition_history() -> List[str]
@@ -593,9 +514,6 @@ This package mimics the structure of haive.core for testing documentation genera
                   this would traverse the state chain to build the complete history.
 
 
-               .. autolink-examples:: get_transition_history
-                  :collapse:
-
 
             .. py:method:: has_changed_since(state_id: str) -> bool
 
@@ -606,9 +524,6 @@ This package mimics the structure of haive.core for testing documentation genera
                :returns: True if state has changed, False otherwise
 
 
-               .. autolink-examples:: has_changed_since
-                  :collapse:
-
 
             .. py:method:: mark_final() -> None
 
@@ -616,9 +531,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                Final states cannot be transitioned from or rolled back.
 
-
-               .. autolink-examples:: mark_final
-                  :collapse:
 
 
             .. py:method:: rollback() -> Optional[StateSchema]
@@ -635,9 +547,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                :raises ValueError: If rollback is not possible
 
-
-               .. autolink-examples:: rollback
-                  :collapse:
 
 
             .. py:attribute:: is_final
@@ -726,22 +635,12 @@ This package mimics the structure of haive.core for testing documentation genera
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: TestLLMConfig
-               :collapse:
-
             .. py:method:: add_tool(tool_name: str) -> None
 
                Add a tool to the configuration.
 
                :param tool_name: Name of the tool to add
 
-
-               .. autolink-examples:: add_tool
-                  :collapse:
 
 
             .. py:method:: get_summary() -> Dict[str, Any]
@@ -751,9 +650,6 @@ This package mimics the structure of haive.core for testing documentation genera
                :returns: Dictionary containing configuration summary
 
 
-               .. autolink-examples:: get_summary
-                  :collapse:
-
 
             .. py:method:: remove_tool(tool_name: str) -> None
 
@@ -761,9 +657,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                :param tool_name: Name of the tool to remove
 
-
-               .. autolink-examples:: remove_tool
-                  :collapse:
 
 
             .. py:method:: with_tools(tools: List[str]) -> TestLLMConfig
@@ -774,9 +667,6 @@ This package mimics the structure of haive.core for testing documentation genera
 
                :returns: New TestLLMConfig instance with tools
 
-
-               .. autolink-examples:: with_tools
-                  :collapse:
 
 
             .. py:attribute:: max_tokens

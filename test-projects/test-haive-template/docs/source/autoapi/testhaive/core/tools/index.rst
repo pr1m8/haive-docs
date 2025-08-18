@@ -6,9 +6,6 @@ testhaive.core.tools
 Tools module for testhaive.core.
 
 
-.. autolink-examples:: testhaive.core.tools
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Tools module for testhaive.core.
 
    Tools module for testhaive.core.
 
-
-   .. autolink-examples:: testhaive.core.tools
-      :collapse:
 
 
 
@@ -75,20 +69,10 @@ Tools module for testhaive.core.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: BaseTool
-               :collapse:
-
             .. py:method:: execute(**kwargs) -> Dict[str, Any]
 
                Execute the tool with given parameters.
 
-
-               .. autolink-examples:: execute
-                  :collapse:
 
 
             .. py:attribute:: description

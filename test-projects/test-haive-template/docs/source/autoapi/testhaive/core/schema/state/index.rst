@@ -9,9 +9,6 @@ This module provides specialized state schemas for different types of stateful
 components in the testhaive framework, including agents, workflows, and execution contexts.
 
 
-.. autolink-examples:: testhaive.core.schema.state
-   :collapse:
-
 
 .. raw:: html
    
@@ -25,9 +22,6 @@ components in the testhaive framework, including agents, workflows, and executio
    This module provides specialized state schemas for different types of stateful
    components in the testhaive framework, including agents, workflows, and execution contexts.
 
-
-   .. autolink-examples:: testhaive.core.schema.state
-      :collapse:
 
 
       
@@ -139,13 +133,6 @@ components in the testhaive framework, including agents, workflows, and executio
             Initialize agent state with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: AgentState
-               :collapse:
-
             .. py:method:: add_conversation_message(role: str, content: str, metadata: Optional[Dict[str, Any]] = None) -> None
 
                Add a message to the conversation history.
@@ -155,9 +142,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param metadata: Optional metadata for the message
 
 
-               .. autolink-examples:: add_conversation_message
-                  :collapse:
-
 
             .. py:method:: add_error(error_message: str) -> None
 
@@ -165,9 +149,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :param error_message: Error message to record
 
-
-               .. autolink-examples:: add_error
-                  :collapse:
 
 
             .. py:method:: add_task_to_queue(task_description: str) -> None
@@ -177,9 +158,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param task_description: Description of the task to add
 
 
-               .. autolink-examples:: add_task_to_queue
-                  :collapse:
-
 
             .. py:method:: complete_current_task() -> Optional[str]
 
@@ -187,9 +165,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :returns: Next task from queue if available, None otherwise
 
-
-               .. autolink-examples:: complete_current_task
-                  :collapse:
 
 
             .. py:method:: get_conversation_summary() -> Dict[str, Any]
@@ -199,9 +174,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :returns: Dictionary with conversation statistics
 
 
-               .. autolink-examples:: get_conversation_summary
-                  :collapse:
-
 
             .. py:method:: get_tool_usage_summary() -> Dict[str, Any]
 
@@ -209,9 +181,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :returns: Dictionary with tool usage statistics
 
-
-               .. autolink-examples:: get_tool_usage_summary
-                  :collapse:
 
 
             .. py:method:: record_tool_call(tool_name: str, parameters: Dict[str, Any], result: Optional[Any] = None) -> None
@@ -223,9 +192,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param result: Result returned by the tool (if available)
 
 
-               .. autolink-examples:: record_tool_call
-                  :collapse:
-
 
             .. py:method:: set_current_task(task_description: str) -> None
 
@@ -233,9 +199,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :param task_description: Description of the task
 
-
-               .. autolink-examples:: set_current_task
-                  :collapse:
 
 
             .. py:method:: update_performance_metric(metric_name: str, value: float) -> None
@@ -246,9 +209,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param value: New value for the metric
 
 
-               .. autolink-examples:: update_performance_metric
-                  :collapse:
-
 
             .. py:method:: update_resource_usage(resource_type: ResourceType, usage: float) -> None
 
@@ -257,9 +217,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param resource_type: Type of resource being tracked
                :param usage: Current usage amount
 
-
-               .. autolink-examples:: update_resource_usage
-                  :collapse:
 
 
             .. py:attribute:: agent_name
@@ -394,22 +351,12 @@ components in the testhaive framework, including agents, workflows, and executio
             Initialize execution context with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ExecutionContext
-               :collapse:
-
             .. py:method:: check_resource_limits() -> Dict[str, bool]
 
                Check if current resource usage is within limits.
 
                :returns: Dictionary showing which limits are exceeded
 
-
-               .. autolink-examples:: check_resource_limits
-                  :collapse:
 
 
             .. py:method:: end_execution_session(session_id: str, outputs: Optional[Dict[str, Any]] = None) -> None
@@ -420,9 +367,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param outputs: Optional session outputs
 
 
-               .. autolink-examples:: end_execution_session
-                  :collapse:
-
 
             .. py:method:: get_session_summary() -> Dict[str, Any]
 
@@ -430,9 +374,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :returns: Dictionary with session statistics
 
-
-               .. autolink-examples:: get_session_summary
-                  :collapse:
 
 
             .. py:method:: start_execution_session(session_name: str, parameters: Optional[Dict[str, Any]] = None) -> str
@@ -445,9 +386,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :returns: Unique session ID
 
 
-               .. autolink-examples:: start_execution_session
-                  :collapse:
-
 
             .. py:method:: update_monitoring_data(metric_name: str, value: float) -> None
 
@@ -457,9 +395,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param value: New metric value
 
 
-               .. autolink-examples:: update_monitoring_data
-                  :collapse:
-
 
             .. py:method:: update_session_status(session_id: str, status: ExecutionStatus) -> None
 
@@ -468,9 +403,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param session_id: ID of the session to update
                :param status: New status for the session
 
-
-               .. autolink-examples:: update_session_status
-                  :collapse:
 
 
             .. py:attribute:: active_sessions
@@ -560,13 +492,6 @@ components in the testhaive framework, including agents, workflows, and executio
             Initialize self.  See help(type(self)) for accurate signature.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ExecutionStatus
-               :collapse:
-
             .. py:attribute:: CANCELLED
                :value: 'cancelled'
 
@@ -635,13 +560,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: ResourceType
-               :collapse:
 
             .. py:attribute:: CPU
                :value: 'cpu'
@@ -758,13 +676,6 @@ components in the testhaive framework, including agents, workflows, and executio
             Initialize workflow state with proper state type.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: WorkflowState
-               :collapse:
-
             .. py:method:: add_step(step_id: str, step_config: Dict[str, Any]) -> None
 
                Add a step to the workflow.
@@ -772,9 +683,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param step_id: Unique identifier for the step
                :param step_config: Configuration for the step
 
-
-               .. autolink-examples:: add_step
-                  :collapse:
 
 
             .. py:method:: add_step_dependency(step_id: str, depends_on: str) -> None
@@ -784,9 +692,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param step_id: ID of the step that has a dependency
                :param depends_on: ID of the step that must complete first
 
-
-               .. autolink-examples:: add_step_dependency
-                  :collapse:
 
 
             .. py:method:: can_execute_step(step_id: str) -> bool
@@ -798,9 +703,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :returns: True if step can be executed, False otherwise
 
 
-               .. autolink-examples:: can_execute_step
-                  :collapse:
-
 
             .. py:method:: complete_step(step_id: str, outputs: Dict[str, Any]) -> None
 
@@ -809,9 +711,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param step_id: ID of the completed step
                :param outputs: Outputs produced by the step
 
-
-               .. autolink-examples:: complete_step
-                  :collapse:
 
 
             .. py:method:: fail_step(step_id: str, error_message: str) -> None
@@ -822,9 +721,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :param error_message: Error message describing the failure
 
 
-               .. autolink-examples:: fail_step
-                  :collapse:
-
 
             .. py:method:: get_executable_steps() -> List[str]
 
@@ -833,9 +729,6 @@ components in the testhaive framework, including agents, workflows, and executio
                :returns: List of step IDs that can be executed
 
 
-               .. autolink-examples:: get_executable_steps
-                  :collapse:
-
 
             .. py:method:: get_workflow_progress() -> Dict[str, Any]
 
@@ -843,9 +736,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :returns: Dictionary with progress statistics
 
-
-               .. autolink-examples:: get_workflow_progress
-                  :collapse:
 
 
             .. py:method:: start_step(step_id: str) -> bool
@@ -856,9 +746,6 @@ components in the testhaive framework, including agents, workflows, and executio
 
                :returns: True if step was started, False if dependencies not met
 
-
-               .. autolink-examples:: start_step
-                  :collapse:
 
 
             .. py:attribute:: completed_steps

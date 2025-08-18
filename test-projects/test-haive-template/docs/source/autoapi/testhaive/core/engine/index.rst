@@ -6,9 +6,6 @@ testhaive.core.engine
 Engine module for testhaive.core configuration.
 
 
-.. autolink-examples:: testhaive.core.engine
-   :collapse:
-
 
 .. raw:: html
    
@@ -19,9 +16,6 @@ Engine module for testhaive.core configuration.
 
    Engine module for testhaive.core configuration.
 
-
-   .. autolink-examples:: testhaive.core.engine
-      :collapse:
 
 
 
@@ -70,13 +64,6 @@ Engine module for testhaive.core configuration.
 
             Initialize self.  See help(type(self)) for accurate signature.
 
-
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: EngineMode
-               :collapse:
 
             .. py:attribute:: MULTI_AGENT
                :value: 'multi_agent'
@@ -154,22 +141,12 @@ Engine module for testhaive.core configuration.
             `self` is explicitly positional-only to allow `self` as a field name.
 
 
-            .. autolink-examples:: __init__
-               :collapse:
-
-
-            .. autolink-examples:: TestLLMConfig
-               :collapse:
-
             .. py:method:: add_tool(tool_name: str) -> None
 
                Add a tool to the configuration.
 
                :param tool_name: Name of the tool to add
 
-
-               .. autolink-examples:: add_tool
-                  :collapse:
 
 
             .. py:method:: get_summary() -> Dict[str, Any]
@@ -179,9 +156,6 @@ Engine module for testhaive.core configuration.
                :returns: Dictionary containing configuration summary
 
 
-               .. autolink-examples:: get_summary
-                  :collapse:
-
 
             .. py:method:: remove_tool(tool_name: str) -> None
 
@@ -189,9 +163,6 @@ Engine module for testhaive.core configuration.
 
                :param tool_name: Name of the tool to remove
 
-
-               .. autolink-examples:: remove_tool
-                  :collapse:
 
 
             .. py:method:: with_tools(tools: List[str]) -> TestLLMConfig
@@ -202,9 +173,6 @@ Engine module for testhaive.core configuration.
 
                :returns: New TestLLMConfig instance with tools
 
-
-               .. autolink-examples:: with_tools
-                  :collapse:
 
 
             .. py:attribute:: max_tokens

@@ -1,0 +1,89 @@
+2025-08-08  < /dev/null |  7f29b66 | 0rac130fD31phi | Initial commit
+2025-08-08  < /dev/null |  7b932cd | 0rac130fD31phi | initial commit
+2025-08-08  < /dev/null |  991e9a7 | 0rac130fD31phi | Update .gitignore to include additional patterns for Python, Poetry, Sphinx documentation, IDEs, OS files, environment variables, MyPy, Ruff, Jupyter notebooks, logs, and temporary files.
+2025-08-08  < /dev/null |  c3039e3 | 0rac130fD31phi | Update pyproject.toml and add requirements.txt with dependencies for Python 3.12, including various Sphinx extensions and other libraries.
+2025-08-08  < /dev/null |  a7e87d1 | 0rac130fD31phi | Enhance documentation setup by adding new Sphinx extensions, improving CLI documentation templates, and implementing an enhanced Sphinx build script for better error reporting. Update pyproject.toml with new dependencies and refine existing configurations for improved functionality and user experience.
+2025-08-08  < /dev/null |  39bdd47 | 0rac130fD31phi | Refactor Sphinx configuration in conf.py by organizing extensions, enhancing comments, and adding new features for favicon management, document collections, and combining documents. Improved readability and fixed setup issues for sphinx-lastupdate.
+2025-08-08  < /dev/null |  a0e35c3 | 0rac130fD31phi | Update pyproject.toml and conf.py to refine Sphinx extensions, remove unnecessary dependencies, and enhance configuration for comments, collections, and OpenGraph metadata. Improved organization and readability of the configuration files.
+2025-08-08  < /dev/null |  08c08bd | 0rac130fD31phi | feat(intersphinx-mapping)
+2025-08-08  < /dev/null |  4db6a22 | 0rac130fD31phi | feat: integrate seed-intersphinx-mapping for automatic documentation linking
+2025-08-11  < /dev/null |  d0e7bc3 | 0rac130fD31phi | feat(update) docs are updated and restored
+2025-08-11  < /dev/null |  37bc51e | 0rac130fD31phi | chore: checkpoint before cleanup - all portable tool versions and docs present
+2025-08-11  < /dev/null |  a6c320f | 0rac130fD31phi | cleanup: remove simple/portable tool versions - keeping only full monorepo documentation system
+2025-08-11  < /dev/null |  450db55 | 0rac130fD31phi | cleanup: remove remaining simple tool references and update README for monorepo focus
+2025-08-11  < /dev/null |  848800e | 0rac130fD31phi | docs: consolidate documentation files into organized structure
+2025-08-11  < /dev/null |  12146c0 | 0rac130fD31phi | Add TODO.md file with initial breadcrumb suggestion
+2025-08-11  < /dev/null |  093b96a | 0rac130fD31phi | docs: update Sphinx configuration for Haive AI Agent Framework
+2025-08-11  < /dev/null |  8c894cf | 0rac130fD31phi | feat: introduce haive-docs package with shared Sphinx configuration
+2025-08-11  < /dev/null |  e95dfba | 0rac130fD31phi | feat: create clean Sphinx configuration for Haive Central Documentation Hub
+2025-08-11  < /dev/null |  1fd752f | 0rac130fD31phi | feat: enhance Sphinx configuration for Haive documentation
+2025-08-11  < /dev/null |  a7321e2 | 0rac130fD31phi | feat: add universal documentation initialization CLI tool
+2025-08-11  < /dev/null |  e66ef52 | 0rac130fD31phi | feat: rename haive-docs to pydevelop-docs
+2025-08-11  < /dev/null |  dfb40b3 | 0rac130fD31phi | feat: add initial changelog and template for documentation updates
+2025-08-11  < /dev/null |  1cbf1b6 | 0rac130fD31phi | feat: add git-cliff configuration for changelog generation
+2025-08-11  < /dev/null |  031c7b4 | 0rac130fD31phi | fix: update towncrier configuration for changelog management
+2025-08-11  < /dev/null |  ec5476b | 0rac130fD31phi | feat: enhance documentation management with auto-fix utilities
+2025-08-11  < /dev/null |  efb081c | 0rac130fD31phi | feat: comprehensive documentation overhaul and extension cleanup
+2025-08-12  < /dev/null |  a6543be | 0rac130fD31phi | feat: introduce enhanced logging and analysis tools for Sphinx builds
+2025-08-12  < /dev/null |  7118b35 | 0rac130fD31phi | fix: update autoapi configuration to exclude misplaced test files
+2025-08-12  < /dev/null |  661574f | 0rac130fD31phi | feat: add docstring processing to fix RST formatting issues
+2025-08-12  < /dev/null |  05919ed | 0rac130fD31phi | fix: update autoapi configuration to exclude additional test files
+2025-08-13  < /dev/null |  550abf1 | 0rac130fD31phi | feat: add documentation hub linking and updating commands
+2025-08-13  < /dev/null |  86cf73c | 0rac130fD31phi | feat(link-docs): major UX overhaul for documentation hub
+2025-08-13  < /dev/null |  466379c | 0rac130fD31phi | fix: correct relative paths for package documentation links
+2025-08-13  < /dev/null |  7b0cd37 | 0rac130fD31phi | fix: remove external package links from TOC tree to prevent broken sidebar links
+2025-08-13  < /dev/null |  f633767 | 0rac130fD31phi | feat: resolve AutoAPI hierarchical organization and add configurable TOC
+2025-08-13  < /dev/null |  8534025 | 0rac130fD31phi | feat: update conf.py generation templates with AutoAPI hierarchical fix documentation
+2025-08-13  < /dev/null |  4e087f2 | 0rac130fD31phi | fix: add hierarchical AutoAPI setting to CLI template and fix extension order
+2025-08-13  < /dev/null |  bdc8fbd | 0rac130fD31phi | feat: consolidate CLI to use shared config module
+2025-08-13  < /dev/null |  d480130 | 0rac130fD31phi | docs: organize project documentation and add directives
+2025-08-13  < /dev/null |  cc43eec | 0rac130fD31phi | feat: Complete Issue #3 - Add comprehensive getting started content
+2025-08-13  < /dev/null |  384eff9 | 0rac130fD31phi | fix: resolve static file copying issue - complete CSS and JS distribution
+2025-08-13  < /dev/null |  df36ff7 | 0rac130fD31phi | fix(css): resolve comprehensive light mode text visibility issues
+2025-08-13  < /dev/null |  543fabe | 0rac130fD31phi | feat: implement unified documentation system with auto-detection
+2025-08-13  < /dev/null |  08a9cc8 | 0rac130fD31phi | chore(pyproject) added sphinxcontrib-lunrsearch
+2025-08-13  < /dev/null |  6446d38 | 0rac130fD31phi | fix: resolve **kwargs visibility issues in dark mode
+2025-08-13  < /dev/null |  40980a5 | 0rac130fD31phi | docs: add template management guide for Issue #6 implementation
+2025-08-13  < /dev/null |  89ba52b | 0rac130fD31phi | fix: resolve build errors and add intelligent template system
+2025-08-13  < /dev/null |  791e4db | 0rac130fD31phi | docs: add comprehensive Haive documentation build guides
+2025-08-13  < /dev/null |  174c7f9 | 0rac130fD31phi | feat: enhanced pydevelop-docs with logging, package ignore, and monorepo support
+2025-08-15  < /dev/null |  b2d6733 | 0rac130fD31phi | feat: implement AutoAPI template distribution fix
+2025-08-15  < /dev/null |  fb02526 | 0rac130fD31phi | fix: remove custom AutoAPI templates in favor of default templates
+2025-08-15  < /dev/null |  1f27332 | 0rac130fD31phi | fix: Restore and fix custom AutoAPI templates
+2025-08-15  < /dev/null |  e880c74 | 0rac130fD31phi | fix: AutoAPI template RST formatting issues
+2025-08-15  < /dev/null |  3f3dee0 | 0rac130fD31phi | fix: AutoAPI Module Contents dark mode visibility
+2025-08-15  < /dev/null |  683855e | 0rac130fD31phi | docs: comprehensive pydevelop-docs package analysis and cleanup roadmap
+2025-08-15  < /dev/null |  112f614 | 0rac130fD31phi | feat: emergency template cleanup - fix broken AutoAPI templates
+2025-08-15  < /dev/null |  3497afe | 0rac130fD31phi | feat: FINAL FIX - replace broken templates with correct AutoAPI defaults
+2025-08-15  < /dev/null |  090d988 | 0rac130fD31phi | feat(templates): enhance AutoAPI templates with modern design and dropdowns
+2025-08-15  < /dev/null |  16c6b50 | 0rac130fD31phi | refactor: simplify AutoAPI module template from dropdowns to clean admonitions
+2025-08-15  < /dev/null |  31e74b6 | 0rac130fD31phi | feat(autoapi): comprehensive template customization for modern documentation
+2025-08-15  < /dev/null |  a25d0ce | 0rac130fD31phi | feat: AutoAPI hierarchical structure with TOC template fixes
+2025-08-15  < /dev/null |  24cf413 | 0rac130fD31phi | fix: improve AutoAPI hierarchical structure by filtering to top-level modules only
+2025-08-15  < /dev/null |  d76709c | 0rac130fD31phi | fix: simplify AutoAPI index template to fix toctree rendering
+2025-08-15  < /dev/null |  20907a1 | 0rac130fD31phi | feat: implement breadcrumb navigation for Furo theme
+2025-08-15  < /dev/null |  669dc8c | 0rac130fD31phi | fix: clean up all template djLint warnings
+2025-08-15  < /dev/null |  974b86d | 0rac130fD31phi | feat: comprehensive functionality validation and testing
+2025-08-15  < /dev/null |  a2fe8ab | 0rac130fD31phi | chore: comprehensive project cleanup and archival
+2025-08-15  < /dev/null |  4f42fba | 0rac130fD31phi | feat: add test script for Haive documentation utilities
+2025-08-15  < /dev/null |  f0d8f2f | 0rac130fD31phi | feat: add Haive documentation rebuild command and utilities
+2025-08-15  < /dev/null |  3c56087 | 0rac130fD31phi | feat: enhance documentation layout and styling
+2025-08-15  < /dev/null |  3aad1db | 0rac130fD31phi | feat: complete Haive documentation rebuild implementation
+2025-08-15  < /dev/null |  c86349b | 0rac130fD31phi | feat: add build error classification module for Sphinx documentation
+2025-08-15  < /dev/null |  64ff9e9 | 0rac130fD31phi | feat(build): add smart documentation build system with error classification
+2025-08-15  < /dev/null |  3b1ffc0 | 0rac130fD31phi | feat(utils): integrate smart build system with existing utilities
+2025-08-15  < /dev/null |  e51fb01 | 0rac130fD31phi | feat(testing): add comprehensive Playwright documentation testing suite
+2025-08-15  < /dev/null |  1d7b843 | 0rac130fD31phi | docs(testing): add comprehensive test reports and analysis
+2025-08-15  < /dev/null |  b454439 | 0rac130fD31phi | refactor(core): remove haive-specific utilities and update core files
+2025-08-15  < /dev/null |  1188be5 | 0rac130fD31phi | chore(git): update .gitignore for test artifacts and temporary files
+2025-08-15  < /dev/null |  70fe070 | 0rac130fD31phi | docs(test): add AutoAPI hierarchical fix validation notes
+2025-08-15  < /dev/null |  c0d09bb | 0rac130fD31phi | fix: remove admonition over-styling to restore Furo semantic theming
+2025-08-15  < /dev/null |  469103a | 0rac130fD31phi | docs(test): add AutoAPI hierarchical fix validation notes
+2025-08-17  < /dev/null |  dca018d | 0rac130fD31phi | feat: add fallback handling for sphinx-codeautolink union type issues
+2025-08-17  < /dev/null |  aa006f8 | 0rac130fD31phi | refactor: remove union type wrapper - accept sphinx-codeautolink warnings
+2025-08-17  < /dev/null |  484a181 | 0rac130fD31phi | docs: add comprehensive CSS issue analysis and fix plan
+2025-08-17  < /dev/null |  09d1862 | 0rac130fD31phi | fix: remove aggressive CSS styling to restore clean documentation
+2025-08-17  < /dev/null |  59619e8 | 0rac130fD31phi | docs: add CSS fix implementation summary
+2025-08-17  < /dev/null |  a6ca772 | 0rac130fD31phi | docs(css): complete CSS simplification - remove marketing-style documentation
+2025-08-17  < /dev/null |  72d0a86 | 0rac130fD31phi | feat(testing): add comprehensive visual testing with feedback loop
+2025-08-17  < /dev/null |  94ec295 | 0rac130fD31phi | docs: add CSS fix implementation summary

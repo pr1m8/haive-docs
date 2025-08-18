@@ -622,10 +622,9 @@ def _get_complete_theme_options(
     """
     return {
         "sidebar_hide_name": False,
-        # REMOVED unsupported Furo options that caused warnings:
-        # navigation_depth, collapse_navigation, sticky_navigation,
-        # includehidden, titles_only, breadcrumb, breadcrumb_separator, breadcrumb_depth
-        # Furo handles navigation automatically - no need to override
+        "navigation_with_keys": True,  # ✅ CRITICAL: Enable navigation
+        # Furo theme navigation options (these ARE supported)
+        "top_of_page_button": None,  # Remove "Back to top" button
         # Intense branding colors
         "light_css_variables": {
             "color-brand-primary": "#2563eb",  # Blue-600

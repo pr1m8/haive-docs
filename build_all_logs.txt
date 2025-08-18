@@ -1,0 +1,151 @@
+nohup: ignoring input
+Opening in existing browser session.
+[92m================================================================================[0m
+[92m🚀 Haive Documentation Builder[0m
+[92m================================================================================[0m
+
+[94m📦 Building documentation for haive-core...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[93m  ⚠️  Union type syntax detected - using fallback mode[0m
+[91m  ❌ Build failed - no output generated[0m
+
+[94m📦 Building documentation for haive-agents...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-tools...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-games...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-dataflow...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-mcp...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-prebuilt...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+[94m================================================================================[0m
+[94m📊 Build Summary[0m
+[94m================================================================================[0m
+[92m✅ Successfully built: 6 packages[0m
+   - haive-agents
+   - haive-tools
+   - haive-games
+   - haive-dataflow
+   - haive-mcp
+   - haive-prebuilt
+
+[91m❌ Failed to build: 1 packages[0m
+   - haive-core
+
+[94m🏠 Creating central documentation hub...[0m
+[92m✅ Documentation hub created[0m
+[92m================================================================================[0m
+[92m🌐 Opening Documentation[0m
+[92m================================================================================[0m
+[92m✅ Documentation hub opened in browser[0m
+
+[94m📚 Individual Package Documentation:[0m
+   haive-agents: file:///home/will/Projects/haive/backend/haive/packages/haive-agents/docs/build/index.html
+   haive-tools: file:///home/will/Projects/haive/backend/haive/packages/haive-tools/docs/build/index.html
+   haive-games: file:///home/will/Projects/haive/backend/haive/packages/haive-games/docs/build/index.html
+   haive-dataflow: file:///home/will/Projects/haive/backend/haive/packages/haive-dataflow/docs/build/index.html
+   haive-mcp: file:///home/will/Projects/haive/backend/haive/packages/haive-mcp/docs/build/index.html
+   haive-prebuilt: file:///home/will/Projects/haive/backend/haive/packages/haive-prebuilt/docs/build/index.html
+Opening in existing browser session.
+[92m================================================================================[0m
+[92m🚀 Haive Documentation Builder[0m
+[92m================================================================================[0m
+
+[94m📦 Building documentation for haive-core...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[93m  ⚠️  Union type syntax detected - using fallback mode[0m
+[91m  ❌ Build failed - no output generated[0m
+
+[94m📦 Building documentation for haive-agents...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-tools...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-games...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-dataflow...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-mcp...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+
+[94m📦 Building documentation for haive-prebuilt...[0m
+  Initializing PyDevelop-Docs...
+[92m  ✅ Initialized successfully[0m
+  Building Sphinx documentation...
+[92m  ✅ Documentation built successfully[0m
+[94m================================================================================[0m
+[94m📊 Build Summary[0m
+[94m================================================================================[0m
+[92m✅ Successfully built: 6 packages[0m
+   - haive-agents
+   - haive-tools
+   - haive-games
+   - haive-dataflow
+   - haive-mcp
+   - haive-prebuilt
+
+[91m❌ Failed to build: 1 packages[0m
+   - haive-core
+
+[94m🏠 Creating central documentation hub...[0m
+[92m✅ Documentation hub created[0m
+[92m================================================================================[0m
+[92m🌐 Opening Documentation[0m
+[92m================================================================================[0m
+[92m✅ Documentation hub opened in browser[0m
+
+[94m📚 Individual Package Documentation:[0m
+   haive-agents: file:///home/will/Projects/haive/backend/haive/packages/haive-agents/docs/build/index.html
+   haive-tools: file:///home/will/Projects/haive/backend/haive/packages/haive-tools/docs/build/index.html
+   haive-games: file:///home/will/Projects/haive/backend/haive/packages/haive-games/docs/build/index.html
+   haive-dataflow: file:///home/will/Projects/haive/backend/haive/packages/haive-dataflow/docs/build/index.html
+   haive-mcp: file:///home/will/Projects/haive/backend/haive/packages/haive-mcp/docs/build/index.html
+   haive-prebuilt: file:///home/will/Projects/haive/backend/haive/packages/haive-prebuilt/docs/build/index.html
